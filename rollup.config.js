@@ -1,18 +1,16 @@
 export default {
-    input: 'src/index.js',
+    input: './src/pcd-format.js',
     plugins: [
     ],
     output: [
         {
             format: 'umd',
-            name: 'THREE',
             file: 'build/pcd-format.js',
-            indent: '\t'
+            name: 'pcd-format'
         },
         {
             format: 'es',
-            file: 'build/pcd-format.module.js',
-            indent: '\t'
+            file: 'build/pcd-format.module.js'
         }
     ]
 };

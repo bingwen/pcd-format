@@ -1,11 +1,20 @@
 {
   "name": "pcd-format",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Encode & Decode PCD file",
   "main": "build/pcd-format.js",
-  "module": "build/three.module.js",
-  "author": "Bingwen Shi",
+  "module": "build/pcd-format.module.js",
+  "author": "Bingwen Shi, Zhen Wang, Di Cai",
   "license": "MIT",
+  "keywords": [
+    "pcl", "pcd", "format", "parse", "stringify"
+  ],
+  "files": [
+    "src",
+    "build",
+    "package.json",
+    "README.md"
+  ],
   "devDependencies": {
     "rollup": "^0.67.0"
   },

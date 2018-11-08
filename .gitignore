@@ -5,5 +5,5 @@ yarn-error.log
 *.swp
 .vscode
 .idea
-test/save.pcd
+test/*.save.pcd
 build/
