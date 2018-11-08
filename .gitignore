@@ -1,0 +1,9 @@
+node_modules
+release
+yarn-error.log
+.DS_Store
+*.swp
+.vscode
+.idea
+test/save.pcd
+build/

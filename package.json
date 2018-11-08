@@ -1,0 +1,16 @@
+{
+  "name": "pcd-format",
+  "version": "0.0.1",
+  "description": "Encode & Decode PCD file",
+  "main": "build/pcd-format.js",
+  "module": "build/three.module.js",
+  "author": "Bingwen Shi",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^0.67.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "rollup -c && node test/test.js"
+  }
+}
