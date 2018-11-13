@@ -1,13 +1,17 @@
 {
   "name": "pcd-format",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Encode & Decode PCD file",
   "main": "build/pcd-format.js",
   "module": "build/pcd-format.module.js",
   "author": "Bingwen Shi, Zhen Wang, Di Cai",
   "license": "MIT",
   "keywords": [
-    "pcl", "pcd", "format", "parse", "stringify"
+    "pcl",
+    "pcd",
+    "format",
+    "parse",
+    "stringify"
   ],
   "files": [
     "src",
@@ -16,7 +20,10 @@
     "README.md"
   ],
   "devDependencies": {
-    "rollup": "^0.67.0"
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "rollup": "^0.67.0",
+    "rollup-plugin-babel": "^4.0.3"
   },
   "scripts": {
     "build": "rollup -c",

@@ -1,6 +1,13 @@
+import babel from 'rollup-plugin-babel';
+
 export default {
     input: './src/pcd-format.js',
     plugins: [
+        babel({
+            exclude: 'node_modules/**',
+            babelrc: false,
+            presets: [['@babel/preset-env', { modules: false }]]
+        })
     ],
     output: [
         {
