@@ -13,7 +13,7 @@ export default {
         {
             format: 'umd',
             file: 'build/pcd-format.js',
-            name: 'pcd-format'
+            name: 'pcd'
         },
         {
             format: 'es',

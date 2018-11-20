@@ -1,6 +1,6 @@
 {
   "name": "pcd-format",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Encode & Decode PCD file",
   "main": "build/pcd-format.js",
   "module": "build/pcd-format.module.js",
