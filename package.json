@@ -4,6 +4,7 @@
   "description": "Encode & Decode PCD file",
   "main": "build/pcd-format.js",
   "module": "build/pcd-format.module.js",
+  "repository": "bingwen/pcd-format",
   "author": "Bingwen Shi, Zhen Wang, Di Cai",
   "license": "MIT",
   "keywords": [
