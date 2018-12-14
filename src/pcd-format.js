@@ -4,12 +4,12 @@ import { compress, decompress } from './lzf';
 function parseHeader(textData) {
 
     let header = {};
-    let dataStart = textData.search(/[\r\n]DATA\s(\S*)\s*/i);
+    let dataStart = textData.search(/[\r\n]DATA\s(\S*)[\f\r\t\v]*\n/i);
     if(dataStart == -1) {
         throw "PCD-Format: not found DATA";
     }
 
-    let result = /[\r\n]DATA\s(\S*)\s*/i.exec(textData);
+    let result = /[\r\n]DATA\s(\S*)[\f\r\t\v]*\n/i.exec(textData);
     header.raw = textData.substr(0, dataStart + result[0].length);
     header.str = header.raw.replace(/\#.*/gi, '');
 
@@ -249,7 +249,7 @@ export function parse(arrayBuffer, asList = true, littleEndian=true) {
         const sizes = new Uint32Array(arrayBuffer.slice(header.raw.length, header.raw.length + 8));
         const compressedSize = sizes[0];
         const decompressedSize = sizes[1];
-        const decompressed = decompress(new Uint8Array(arrayBuffer, header.raw.length + 8, compressedSize));
+        const decompressed = decompress(new Uint8Array(arrayBuffer, header.raw.length + 8));
 
         const dataview = new DataView(decompressed);
         points = getPointsFromDataView(dataview, header, asList, littleEndian, true);
